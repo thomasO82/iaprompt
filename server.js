@@ -12,7 +12,7 @@ const openai = new OpenAI({
 });
 
 
-app.listen(3012, () => console.log('Server started on port 8080'));
+app.listen(process.env.PORT, () => console.log('Server started on port '+process.env.PORT));
 
 
 app.post('/api', async (req, res) => {
